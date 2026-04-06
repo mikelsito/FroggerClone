@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dghd7rii024ea"]
+
+[ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://graphics/player/player_simple.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bvow1in7idxld" path="res://scenes/player.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://cid2jis0xcb0x" path="res://scenes/camera_2d.gd" id="2_g2els"]
+
+[node name="player" type="Node2D" unique_id=1915868691]
+script = ExtResource("1_qhqgy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=221136640]
+texture = ExtResource("1_3vyb7")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1231575923]
+zoom = Vector2(4, 4)
+limit_left = -192
+limit_top = -320
+limit_right = 192
+limit_bottom = 302
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+script = ExtResource("2_g2els")
