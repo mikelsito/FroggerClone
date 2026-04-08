@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bg46h5x2n6eev"]
+
+[ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://fonts/Crackman.otf" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_p6dhs"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="3_pyl7j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3w7a"]
+atlas = ExtResource("2_p6dhs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rr2b"]
+atlas = ExtResource("2_p6dhs")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yql1r"]
+atlas = ExtResource("2_p6dhs")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia1n6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3w7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rr2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3w7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yql1r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Title" type="Control" unique_id=412186494]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=98931834]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(3.080368e-06, 0.6916944, 0.9171618, 1)
+
+[node name="Label" type="Label" parent="." unique_id=53898200]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -484.0
+offset_top = -269.0
+offset_right = 481.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4ignj")
+theme_override_font_sizes/font_size = 140
+text = "NOT  FROGGER"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1184059038]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 30.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect" unique_id=525375185]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_ia1n6")
+autoplay = "default"
+frame_progress = 0.29450786
+
+[node name="Label2" type="Label" parent="." unique_id=1590301183]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -179.0
+offset_right = 168.0
+offset_bottom = -141.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_pyl7j")
+theme_override_font_sizes/font_size = 30
+text = "High Score: 123"
