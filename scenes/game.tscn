@@ -2,6 +2,20 @@
 
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dghd7rii024ea" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c63ni5hbggj1t" path="res://scenes/tree1.tscn" id="3_lnu2h"]
+
+[sub_resource type="GDScript" id="GDScript_lnu2h"]
+script/source = "extends StaticBody2D
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
+size = Vector2(14, 641)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
+size = Vector2(405, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(12, 406)
 
 [node name="Game" type="Node2D" unique_id=1637976403]
 metadata/_edit_horizontal_guides_ = [-321.0]
@@ -11,3 +25,34 @@ texture = ExtResource("1_uwrxv")
 
 [node name="player" parent="." unique_id=1915868691 instance=ExtResource("2_yqjtg")]
 position = Vector2(-103, 219)
+
+[node name="Tree1" parent="." unique_id=659236813 instance=ExtResource("3_lnu2h")]
+position = Vector2(-73, 213)
+script = SubResource("GDScript_lnu2h")
+
+[node name="Borders" type="Node2D" parent="." unique_id=958480737]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=1968640743]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=835219145]
+position = Vector2(196, -0.5)
+shape = SubResource("RectangleShape2D_lbhrr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1377769710]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=771827920]
+position = Vector2(2, 328)
+shape = SubResource("RectangleShape2D_iywne")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=1075014026]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=382362309]
+position = Vector2(-196, 0)
+shape = SubResource("RectangleShape2D_lbhrr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1573643564]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1782135951]
+position = Vector2(4.371139e-08, -322)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_lnu2h")

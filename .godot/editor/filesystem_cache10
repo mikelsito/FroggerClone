@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775454236
+::res://::1775497180
 asset sources.txt::TextFile::-1::1771319893::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5991746675164270125::1771319893::1775371895::1::::<><><>0<>0<>b524d7562d655860d6e95c77f9f4f098<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://audio/::1775371895
@@ -37,6 +37,9 @@ tree potted.png::CompressedTexture2D::3389544860567921485::1771319893::177537189
 ::res://graphics/player/::1775371895
 player_simple.png::CompressedTexture2D::3101742799475853270::1771319893::1775371895::1::::<><><>0<>0<>1c5e0eae2902f400d93138ed015c3d2b<>res://.godot/imported/player_simple.png-da0d067e94fb2205dce5f6ce7ba473b7.ctex::
 player_tileset.png::CompressedTexture2D::6843235375669234817::1771319893::1775371895::1::::<><><>0<>0<>21c29d67251e95d2bb7dfe9729d2bb88<>res://.godot/imported/player_tileset.png-4ca3aae43be08322f35644f77e38bfeb.ctex::
-::res://scenes/::1775442234
-game.tscn::PackedScene::7544890810589061561::1775442234::0::1::::<><><>0<>0<><>::uid://doghmovcgeltw::::res://graphics/map.png
-player.tscn::PackedScene::7595085959222546404::1775371923::0::1::::<><><>0<>0<><>::
+::res://scenes/::1775455356
+camera_2d.gd::GDScript::5342201129862461709::1775454573::0::1::::<>Camera2D<><>0<>0<><>::
+game.tscn::PackedScene::7544890810589061561::1775455341::0::1::::<><><>0<>0<><>::uid://doghmovcgeltw::::res://graphics/map.png<>uid://dghd7rii024ea::::res://scenes/player.tscn
+player.gd::GDScript::3890670334865035181::1775455322::0::1::::<>Node2D<><>0<>0<><>::
+player.tscn::PackedScene::7595085959222546404::1775455356::0::1::::<><><>0<>0<><>::uid://bkgrir378horu::::res://graphics/player/player_simple.png<>uid://bvow1in7idxld::::res://scenes/player.gd<>uid://cid2jis0xcb0x::::res://scenes/camera_2d.gd
+sprite_2d.gd::GDScript::5002442045681865533::1775455136::0::1::::<>Sprite2D<><>0<>0<><>::

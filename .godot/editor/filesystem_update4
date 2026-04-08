@@ -1,5 +1,5 @@
 res://scenes/player.tscn
+res://scenes/tree1.tscn
+res://scenes/tree_1.gd
 res://scenes/game.tscn
-res://scenes/camera_2d.gd
-res://scenes/sprite_2d.gd
 res://scenes/player.gd
