@@ -3,9 +3,11 @@ extends Node2D
 var car: PackedScene = preload("res://scenes/car1.tscn")
 var score: int = 0
 
-func go_to_title(body):
-	if body.name == "Player":
-		print("Ouch!")
+func change_scene():
+	get_tree().change_scene_to_file('res://scenes/title.tscn')
+
+func go_to_title(_body):
+	call_deferred("change_scene")
 
 func _on_car_timer_timeout() -> void:
 	var yellow = car.instantiate() as Area2D

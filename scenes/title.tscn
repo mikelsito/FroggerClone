@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bg46h5x2n6eev"]
 
 [ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://fonts/Crackman.otf" id="1_4ignj"]
+[ext_resource type="Script" uid="uid://b7ytu68u08vc1" path="res://scenes/title.gd" id="1_pyl7j"]
 [ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_p6dhs"]
 [ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="3_pyl7j"]
 
@@ -43,6 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pyl7j")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=98931834]
 layout_mode = 1
@@ -88,7 +90,7 @@ grow_vertical = 2
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_ia1n6")
 autoplay = "default"
-frame_progress = 0.29450786
+frame_progress = 0.37840593
 
 [node name="Label2" type="Label" parent="." unique_id=1590301183]
 layout_mode = 1
