@@ -3,3 +3,9 @@ res://scenes/tree1.tscn
 res://scenes/tree_1.gd
 res://scenes/game.tscn
 res://scenes/player.gd
+res://scenes/game.gd
+res://scenes/test.tscn
+res://scenes/win.gd
+res://scenes/win.tscn
+res://scenes/car1.tscn
+res://scenes/car_1.gd

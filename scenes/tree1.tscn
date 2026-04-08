@@ -4,20 +4,10 @@
 
 [sub_resource type="GDScript" id="GDScript_xuq4r"]
 script/source = "extends StaticBody2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vvkj6"]
-size = Vector2(10, 20)
+size = Vector2(10, 14)
 
 [node name="Tree1" type="StaticBody2D" unique_id=659236813]
 script = SubResource("GDScript_xuq4r")
@@ -26,5 +16,5 @@ script = SubResource("GDScript_xuq4r")
 texture = ExtResource("1_xuq4r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=965256497]
-position = Vector2(0, 1)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_vvkj6")

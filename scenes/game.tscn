@@ -1,12 +1,29 @@
 [gd_scene format=3 uid="uid://dfq2iqhuccltx"]
 
+[ext_resource type="Script" uid="uid://4vxvmd16aeo1" path="res://scenes/game.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dghd7rii024ea" path="res://scenes/player.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://c63ni5hbggj1t" path="res://scenes/tree1.tscn" id="3_lnu2h"]
-
-[sub_resource type="GDScript" id="GDScript_lnu2h"]
-script/source = "extends StaticBody2D
-"
+[ext_resource type="PackedScene" uid="uid://br6wckkxrlyg6" path="res://scenes/win.tscn" id="5_iywne"]
+[ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="5_p57ef"]
+[ext_resource type="Texture2D" uid="uid://b8fq8sgkmu4dx" path="res://graphics/objects/green car.png" id="6_5newe"]
+[ext_resource type="Texture2D" uid="uid://d1h0ksxlju0ou" path="res://graphics/objects/house1.png" id="6_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://ocjfhrelwysu" path="res://graphics/cars/red.png" id="7_37s47"]
+[ext_resource type="Texture2D" uid="uid://beho7qo80tneo" path="res://graphics/objects/bin.png" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://cxutqp0hti8vw" path="res://graphics/objects/bench.png" id="8_bt5mj"]
+[ext_resource type="Texture2D" uid="uid://b778fphjcav0" path="res://graphics/objects/light.png" id="9_e1j6l"]
+[ext_resource type="Texture2D" uid="uid://oqgtp468wc6x" path="res://graphics/objects/sign.png" id="10_pl11u"]
+[ext_resource type="Texture2D" uid="uid://cfe22lwgaf1k2" path="res://graphics/objects/traffic.png" id="11_bhx41"]
+[ext_resource type="Texture2D" uid="uid://boj6kq1t4mduj" path="res://graphics/objects/tree potted.png" id="14_qnb83"]
+[ext_resource type="Texture2D" uid="uid://b3jchn0artiyt" path="res://graphics/objects/line.png" id="15_sww3w"]
+[ext_resource type="Texture2D" uid="uid://58kopy31xbf8" path="res://graphics/objects/taxi.png" id="16_suyxu"]
+[ext_resource type="Texture2D" uid="uid://cgvtilagem3np" path="res://graphics/objects/red car.png" id="17_sgl2t"]
+[ext_resource type="Texture2D" uid="uid://y78osdw0bolc" path="res://graphics/objects/box1.png" id="18_qouja"]
+[ext_resource type="Texture2D" uid="uid://cv8cli0ov53f1" path="res://graphics/objects/box2.png" id="19_wljb1"]
+[ext_resource type="Texture2D" uid="uid://cuqeolw7yvunc" path="res://graphics/objects/box3.png" id="20_v2yb1"]
+[ext_resource type="Texture2D" uid="uid://c5iy3tuxd0vaw" path="res://graphics/objects/barrier.png" id="21_js0lu"]
+[ext_resource type="Texture2D" uid="uid://dxciltwc3sgll" path="res://graphics/objects/house2.png" id="22_e1j6l"]
+[ext_resource type="Texture2D" uid="uid://73gfa8tjrcik" path="res://graphics/objects/house3.png" id="23_pl11u"]
+[ext_resource type="Texture2D" uid="uid://y3ndpd5bhsi3" path="res://graphics/objects/tree2.png" id="24_bhx41"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
 size = Vector2(14, 641)
@@ -17,42 +34,750 @@ size = Vector2(405, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
 size = Vector2(12, 406)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
+size = Vector2(60.5, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxtfn"]
+size = Vector2(133, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
+size = Vector2(118, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
+size = Vector2(38, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl11u"]
+size = Vector2(185, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhx41"]
+size = Vector2(265, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnb83"]
+size = Vector2(9, 38)
+
 [node name="Game" type="Node2D" unique_id=1637976403]
+script = ExtResource("1_lbhrr")
 metadata/_edit_horizontal_guides_ = [-321.0]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=681600865]
+[node name="Background" type="Sprite2D" parent="." unique_id=681600865]
 texture = ExtResource("1_uwrxv")
-
-[node name="player" parent="." unique_id=1915868691 instance=ExtResource("2_yqjtg")]
-position = Vector2(-103, 219)
-
-[node name="Tree1" parent="." unique_id=659236813 instance=ExtResource("3_lnu2h")]
-position = Vector2(-73, 213)
-script = SubResource("GDScript_lnu2h")
+metadata/_edit_lock_ = true
 
 [node name="Borders" type="Node2D" parent="." unique_id=958480737]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=1968640743]
+collision_layer = 8
+collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=835219145]
 position = Vector2(196, -0.5)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=1377769710]
+collision_layer = 8
+collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=771827920]
 position = Vector2(2, 328)
 shape = SubResource("RectangleShape2D_iywne")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=1075014026]
+collision_layer = 8
+collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=382362309]
 position = Vector2(-196, 0)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1573643564]
+collision_layer = 8
+collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=1782135951]
 position = Vector2(4.371139e-08, -322)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="WinArea" parent="Borders" unique_id=1399346824 instance=ExtResource("5_iywne")]
+position = Vector2(0, -200)
+collision_layer = 0
+collision_mask = 2
+
+[node name="Objects" type="Node2D" parent="." unique_id=1759746990]
+y_sort_enabled = true
+
+[node name="Player" parent="Objects" unique_id=1915868691 instance=ExtResource("2_yqjtg")]
+position = Vector2(-103, 219)
+
+[node name="Stuff" type="Node2D" parent="Objects" unique_id=1510514064]
+y_sort_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Objects/Stuff" unique_id=1909686420]
+position = Vector2(0, 1)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=571722832]
+position = Vector2(-161, 266)
+shape = SubResource("RectangleShape2D_u5sy4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=2091142280]
+position = Vector2(121.5, 44)
+shape = SubResource("RectangleShape2D_gxtfn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=61153067]
+position = Vector2(-80, -74.5)
+shape = SubResource("RectangleShape2D_5newe")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=829649614]
+position = Vector2(119, -75)
+shape = SubResource("RectangleShape2D_e1j6l")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1449386692]
+position = Vector2(-96.5, 46)
+shape = SubResource("RectangleShape2D_pl11u")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=2139623467]
+position = Vector2(57.5, 263.5)
+shape = SubResource("RectangleShape2D_bhx41")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=390177740]
+position = Vector2(-83.5, 288)
+shape = SubResource("RectangleShape2D_qnb83")
+
+[node name="Tree1" type="Sprite2D" parent="Objects/Stuff" unique_id=410508066]
+y_sort_enabled = true
+position = Vector2(-137, 209)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree3" type="Sprite2D" parent="Objects/Stuff" unique_id=1105469304]
+y_sort_enabled = true
+position = Vector2(-138, 245)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree5" type="Sprite2D" parent="Objects/Stuff" unique_id=1398355329]
+y_sort_enabled = true
+position = Vector2(-137, 278)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree6" type="Sprite2D" parent="Objects/Stuff" unique_id=2023575134]
+y_sort_enabled = true
+position = Vector2(-137, 306)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree7" type="Sprite2D" parent="Objects/Stuff" unique_id=1768684642]
+y_sort_enabled = true
+position = Vector2(-150, 214)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree8" type="Sprite2D" parent="Objects/Stuff" unique_id=1766104358]
+y_sort_enabled = true
+position = Vector2(-172, 209)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree9" type="Sprite2D" parent="Objects/Stuff" unique_id=242000691]
+y_sort_enabled = true
+position = Vector2(-188, 209)
+texture = ExtResource("5_p57ef")
+
+[node name="GreenCar" type="Sprite2D" parent="Objects/Stuff" unique_id=298672536]
+y_sort_enabled = true
+position = Vector2(-112, 64)
+texture = ExtResource("6_5newe")
+
+[node name="Red" type="Sprite2D" parent="Objects/Stuff" unique_id=2127101155]
+y_sort_enabled = true
+position = Vector2(-81, 55)
+texture = ExtResource("7_37s47")
+
+[node name="Bench" type="Sprite2D" parent="Objects/Stuff" unique_id=588397722]
+y_sort_enabled = true
+position = Vector2(61, 37)
+texture = ExtResource("8_bt5mj")
+
+[node name="Bench3" type="Sprite2D" parent="Objects/Stuff" unique_id=1658897973]
+y_sort_enabled = true
+position = Vector2(61, 63)
+texture = ExtResource("8_bt5mj")
+
+[node name="Light2" type="Sprite2D" parent="Objects/Stuff" unique_id=1296896513]
+y_sort_enabled = true
+position = Vector2(119, -85)
+texture = ExtResource("9_e1j6l")
+
+[node name="Light3" type="Sprite2D" parent="Objects/Stuff" unique_id=1103867783]
+y_sort_enabled = true
+position = Vector2(-83, -85)
+texture = ExtResource("9_e1j6l")
+
+[node name="Sign" type="Sprite2D" parent="Objects/Stuff" unique_id=1463744175]
+y_sort_enabled = true
+position = Vector2(-7, 9)
+texture = ExtResource("10_pl11u")
+
+[node name="Sign2" type="Sprite2D" parent="Objects/Stuff" unique_id=685440548]
+y_sort_enabled = true
+position = Vector2(118, 59)
+texture = ExtResource("10_pl11u")
+
+[node name="Traffic" type="Sprite2D" parent="Objects/Stuff" unique_id=945281897]
+y_sort_enabled = true
+position = Vector2(51, 14)
+texture = ExtResource("11_bhx41")
+
+[node name="House1" type="Sprite2D" parent="Objects/Stuff" unique_id=2130465820]
+y_sort_enabled = true
+position = Vector2(-193, 260)
+texture = ExtResource("6_u5sy4")
+
+[node name="Bin" type="Sprite2D" parent="Objects/Stuff" unique_id=2049153388]
+y_sort_enabled = true
+position = Vector2(-152, 309)
+texture = ExtResource("7_u5sy4")
+
+[node name="TreePotted" type="Sprite2D" parent="Objects/Stuff" unique_id=1634658545]
+y_sort_enabled = true
+position = Vector2(-112, -86)
+texture = ExtResource("14_qnb83")
+
+[node name="TreePotted2" type="Sprite2D" parent="Objects/Stuff" unique_id=1185366848]
+y_sort_enabled = true
+position = Vector2(-49, -86)
+texture = ExtResource("14_qnb83")
+
+[node name="Line" type="Sprite2D" parent="Objects/Stuff" unique_id=1470801425]
+y_sort_enabled = true
+position = Vector2(80, 11)
+texture = ExtResource("15_sww3w")
+
+[node name="Bin2" type="Sprite2D" parent="Objects/Stuff" unique_id=1780822592]
+y_sort_enabled = true
+position = Vector2(67, 27)
+texture = ExtResource("7_u5sy4")
+
+[node name="Taxi" type="Sprite2D" parent="Objects/Stuff" unique_id=296393556]
+y_sort_enabled = true
+position = Vector2(144, 64)
+texture = ExtResource("16_suyxu")
+
+[node name="RedCar" type="Sprite2D" parent="Objects/Stuff" unique_id=291141235]
+y_sort_enabled = true
+position = Vector2(176, 64)
+texture = ExtResource("17_sgl2t")
+
+[node name="Box1" type="Sprite2D" parent="Objects/Stuff" unique_id=3678129]
+y_sort_enabled = true
+position = Vector2(110, 68)
+texture = ExtResource("18_qouja")
+
+[node name="Box2" type="Sprite2D" parent="Objects/Stuff" unique_id=286673726]
+y_sort_enabled = true
+position = Vector2(104, 64)
+texture = ExtResource("19_wljb1")
+
+[node name="Box3" type="Sprite2D" parent="Objects/Stuff" unique_id=1185940013]
+y_sort_enabled = true
+position = Vector2(94, 70)
+texture = ExtResource("20_v2yb1")
+
+[node name="Barrier" type="Sprite2D" parent="Objects/Stuff" unique_id=23495271]
+y_sort_enabled = true
+position = Vector2(77, 69)
+texture = ExtResource("21_js0lu")
+
+[node name="Light" type="Sprite2D" parent="Objects/Stuff" unique_id=1665776410]
+y_sort_enabled = true
+position = Vector2(106, 12)
+texture = ExtResource("9_e1j6l")
+
+[node name="Line2" type="Sprite2D" parent="Objects/Stuff" unique_id=228181266]
+y_sort_enabled = true
+position = Vector2(131, 11)
+texture = ExtResource("15_sww3w")
+
+[node name="Line3" type="Sprite2D" parent="Objects/Stuff" unique_id=1862019185]
+y_sort_enabled = true
+position = Vector2(183, 11)
+texture = ExtResource("15_sww3w")
+
+[node name="Light4" type="Sprite2D" parent="Objects/Stuff" unique_id=1013990411]
+y_sort_enabled = true
+position = Vector2(157, 12)
+texture = ExtResource("9_e1j6l")
+
+[node name="TreePotted3" type="Sprite2D" parent="Objects/Stuff" unique_id=1769029844]
+y_sort_enabled = true
+position = Vector2(73, 43)
+texture = ExtResource("14_qnb83")
+
+[node name="Box4" type="Sprite2D" parent="Objects/Stuff" unique_id=417110068]
+position = Vector2(104, -78)
+texture = ExtResource("18_qouja")
+
+[node name="Box5" type="Sprite2D" parent="Objects/Stuff" unique_id=797585538]
+position = Vector2(109, -73)
+texture = ExtResource("19_wljb1")
+
+[node name="Box6" type="Sprite2D" parent="Objects/Stuff" unique_id=1903739826]
+position = Vector2(132, -75)
+texture = ExtResource("20_v2yb1")
+
+[node name="Barrier2" type="Sprite2D" parent="Objects/Stuff" unique_id=551406547]
+position = Vector2(-69, -76)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier3" type="Sprite2D" parent="Objects/Stuff" unique_id=1363551506]
+position = Vector2(-129, -77)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier4" type="Sprite2D" parent="Objects/Stuff" unique_id=1397416090]
+position = Vector2(-96, -76)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier5" type="Sprite2D" parent="Objects/Stuff" unique_id=159020007]
+position = Vector2(-31, -76)
+texture = ExtResource("21_js0lu")
+
+[node name="Box7" type="Sprite2D" parent="Objects/Stuff" unique_id=1236264173]
+position = Vector2(-59, -73)
+texture = ExtResource("19_wljb1")
+
+[node name="Box8" type="Sprite2D" parent="Objects/Stuff" unique_id=1234379131]
+position = Vector2(-120, -73)
+texture = ExtResource("18_qouja")
+
+[node name="Box9" type="Sprite2D" parent="Objects/Stuff" unique_id=1088324494]
+position = Vector2(99, 27)
+texture = ExtResource("20_v2yb1")
+
+[node name="Box10" type="Sprite2D" parent="Objects/Stuff" unique_id=1319684554]
+position = Vector2(109, 29)
+texture = ExtResource("18_qouja")
+
+[node name="Box11" type="Sprite2D" parent="Objects/Stuff" unique_id=1398995727]
+position = Vector2(134, 27)
+texture = ExtResource("20_v2yb1")
+
+[node name="Bin3" type="Sprite2D" parent="Objects/Stuff" unique_id=248096835]
+position = Vector2(120, 27)
+texture = ExtResource("7_u5sy4")
+
+[node name="Light5" type="Sprite2D" parent="Objects/Stuff" unique_id=43531894]
+position = Vector2(-82, -147)
+texture = ExtResource("9_e1j6l")
+
+[node name="Light6" type="Sprite2D" parent="Objects/Stuff" unique_id=658392429]
+position = Vector2(120, -146)
+texture = ExtResource("9_e1j6l")
+
+[node name="Box12" type="Sprite2D" parent="Objects/Stuff" unique_id=1169283056]
+position = Vector2(-8, -138)
+texture = ExtResource("18_qouja")
+
+[node name="Box13" type="Sprite2D" parent="Objects/Stuff" unique_id=1006215632]
+position = Vector2(3, -143)
+texture = ExtResource("20_v2yb1")
+
+[node name="Bin4" type="Sprite2D" parent="Objects/Stuff" unique_id=2052923147]
+position = Vector2(3, -137)
+texture = ExtResource("7_u5sy4")
+
+[node name="Light7" type="Sprite2D" parent="Objects/Stuff" unique_id=1658128180]
+position = Vector2(-84, 9)
+texture = ExtResource("9_e1j6l")
+
+[node name="Box14" type="Sprite2D" parent="Objects/Stuff" unique_id=1070471584]
+position = Vector2(-184, 71)
+texture = ExtResource("18_qouja")
+
+[node name="Box15" type="Sprite2D" parent="Objects/Stuff" unique_id=323576948]
+position = Vector2(-177, 66)
+texture = ExtResource("19_wljb1")
+
+[node name="Box16" type="Sprite2D" parent="Objects/Stuff" unique_id=489101957]
+position = Vector2(-168, 70)
+texture = ExtResource("20_v2yb1")
+
+[node name="Box17" type="Sprite2D" parent="Objects/Stuff" unique_id=2078906291]
+position = Vector2(-33, 29)
+texture = ExtResource("18_qouja")
+
+[node name="Box18" type="Sprite2D" parent="Objects/Stuff" unique_id=1393830007]
+position = Vector2(-26, 24)
+texture = ExtResource("19_wljb1")
+
+[node name="Box19" type="Sprite2D" parent="Objects/Stuff" unique_id=1700258780]
+position = Vector2(-17, 28)
+texture = ExtResource("20_v2yb1")
+
+[node name="Box20" type="Sprite2D" parent="Objects/Stuff" unique_id=2061855082]
+position = Vector2(-107, 27)
+texture = ExtResource("18_qouja")
+
+[node name="Box21" type="Sprite2D" parent="Objects/Stuff" unique_id=979418578]
+position = Vector2(-100, 22)
+texture = ExtResource("19_wljb1")
+
+[node name="Box22" type="Sprite2D" parent="Objects/Stuff" unique_id=1764996394]
+position = Vector2(-91, 26)
+texture = ExtResource("20_v2yb1")
+
+[node name="Bench2" type="Sprite2D" parent="Objects/Stuff" unique_id=1431936785]
+position = Vector2(-136, 64)
+texture = ExtResource("8_bt5mj")
+
+[node name="Bench6" type="Sprite2D" parent="Objects/Stuff" unique_id=164394041]
+position = Vector2(-136, 48)
+texture = ExtResource("8_bt5mj")
+
+[node name="Bin5" type="Sprite2D" parent="Objects/Stuff" unique_id=1694474645]
+position = Vector2(-147, 73)
+texture = ExtResource("7_u5sy4")
+
+[node name="Bench4" type="Sprite2D" parent="Objects/Stuff" unique_id=2133232480]
+position = Vector2(-54, 63)
+texture = ExtResource("8_bt5mj")
+flip_h = true
+
+[node name="Bench5" type="Sprite2D" parent="Objects/Stuff" unique_id=1555041195]
+position = Vector2(-54, 48)
+texture = ExtResource("8_bt5mj")
+flip_h = true
+
+[node name="Bin6" type="Sprite2D" parent="Objects/Stuff" unique_id=1444860817]
+position = Vector2(-11, 69)
+texture = ExtResource("7_u5sy4")
+
+[node name="Barrier6" type="Sprite2D" parent="Objects/Stuff" unique_id=1960200648]
+position = Vector2(-33, 70)
+texture = ExtResource("21_js0lu")
+
+[node name="TreePotted4" type="Sprite2D" parent="Objects/Stuff" unique_id=1470046064]
+position = Vector2(-13, 44)
+texture = ExtResource("14_qnb83")
+
+[node name="Barrier7" type="Sprite2D" parent="Objects/Stuff" unique_id=741862299]
+position = Vector2(-181, 21)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier8" type="Sprite2D" parent="Objects/Stuff" unique_id=1138931739]
+position = Vector2(-151, 21)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier9" type="Sprite2D" parent="Objects/Stuff" unique_id=1389587930]
+position = Vector2(-119, 20)
+texture = ExtResource("21_js0lu")
+
+[node name="Box23" type="Sprite2D" parent="Objects/Stuff" unique_id=956504406]
+position = Vector2(-169, 27)
+texture = ExtResource("19_wljb1")
+
+[node name="Box24" type="Sprite2D" parent="Objects/Stuff" unique_id=1382032373]
+position = Vector2(-163, 34)
+texture = ExtResource("20_v2yb1")
+
+[node name="Bin7" type="Sprite2D" parent="Objects/Stuff" unique_id=814147773]
+position = Vector2(-135, 22)
+texture = ExtResource("7_u5sy4")
+
+[node name="House2" type="Sprite2D" parent="Objects/Stuff" unique_id=283293113]
+position = Vector2(-143, -236)
+texture = ExtResource("6_u5sy4")
+
+[node name="House3" type="Sprite2D" parent="Objects/Stuff" unique_id=415648768]
+position = Vector2(12, -284)
+texture = ExtResource("22_e1j6l")
+
+[node name="House4" type="Sprite2D" parent="Objects/Stuff" unique_id=377345439]
+position = Vector2(75, -260)
+texture = ExtResource("23_pl11u")
+
+[node name="House5" type="Sprite2D" parent="Objects/Stuff" unique_id=1330276581]
+position = Vector2(-51, -260)
+texture = ExtResource("23_pl11u")
+
+[node name="Bin8" type="Sprite2D" parent="Objects/Stuff" unique_id=210342765]
+position = Vector2(-14, -223)
+texture = ExtResource("7_u5sy4")
+
+[node name="Bench7" type="Sprite2D" parent="Objects/Stuff" unique_id=487914180]
+position = Vector2(108, -219)
+texture = ExtResource("8_bt5mj")
+
+[node name="Bench8" type="Sprite2D" parent="Objects/Stuff" unique_id=564009647]
+position = Vector2(108, -206)
+texture = ExtResource("8_bt5mj")
+
+[node name="Bench9" type="Sprite2D" parent="Objects/Stuff" unique_id=910912763]
+position = Vector2(-76, -206)
+texture = ExtResource("8_bt5mj")
+flip_h = true
+
+[node name="Bench10" type="Sprite2D" parent="Objects/Stuff" unique_id=1205745520]
+position = Vector2(-76, -220)
+texture = ExtResource("8_bt5mj")
+flip_h = true
+
+[node name="Tree10" type="Sprite2D" parent="Objects/Stuff" unique_id=1478744935]
+position = Vector2(-92, -258)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree11" type="Sprite2D" parent="Objects/Stuff" unique_id=1132441848]
+position = Vector2(-82, -243)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree12" type="Sprite2D" parent="Objects/Stuff" unique_id=1087674286]
+position = Vector2(-87, -212)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree13" type="Sprite2D" parent="Objects/Stuff" unique_id=953665904]
+position = Vector2(-144, -288)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree14" type="Sprite2D" parent="Objects/Stuff" unique_id=1998747738]
+position = Vector2(-122, -278)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree15" type="Sprite2D" parent="Objects/Stuff" unique_id=1527522491]
+position = Vector2(-85, -310)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree16" type="Sprite2D" parent="Objects/Stuff" unique_id=148492529]
+position = Vector2(-36, -301)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree17" type="Sprite2D" parent="Objects/Stuff" unique_id=1279214693]
+position = Vector2(121, -215)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree18" type="Sprite2D" parent="Objects/Stuff" unique_id=1217522560]
+position = Vector2(108, -246)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree19" type="Sprite2D" parent="Objects/Stuff" unique_id=1788199258]
+position = Vector2(131, -222)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree20" type="Sprite2D" parent="Objects/Stuff" unique_id=684933685]
+position = Vector2(181, -217)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree21" type="Sprite2D" parent="Objects/Stuff" unique_id=166434231]
+position = Vector2(173, -249)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree22" type="Sprite2D" parent="Objects/Stuff" unique_id=381421345]
+position = Vector2(148, -249)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree23" type="Sprite2D" parent="Objects/Stuff" unique_id=1632578093]
+position = Vector2(150, -234)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree24" type="Sprite2D" parent="Objects/Stuff" unique_id=1531945495]
+position = Vector2(71, -301)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree25" type="Sprite2D" parent="Objects/Stuff" unique_id=610468315]
+position = Vector2(99, -289)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree26" type="Sprite2D" parent="Objects/Stuff" unique_id=1270322088]
+position = Vector2(136, -300)
+texture = ExtResource("5_p57ef")
+
+[node name="Barrier10" type="Sprite2D" parent="Objects/Stuff" unique_id=2026301480]
+position = Vector2(162, -206)
+texture = ExtResource("21_js0lu")
+
+[node name="Box25" type="Sprite2D" parent="Objects/Stuff" unique_id=869094781]
+position = Vector2(-142, 224)
+texture = ExtResource("20_v2yb1")
+
+[node name="House6" type="Sprite2D" parent="Objects/Stuff" unique_id=1557338982]
+position = Vector2(-14, 246)
+texture = ExtResource("22_e1j6l")
+
+[node name="House7" type="Sprite2D" parent="Objects/Stuff" unique_id=1766886734]
+position = Vector2(56, 255)
+texture = ExtResource("23_pl11u")
+
+[node name="House8" type="Sprite2D" parent="Objects/Stuff" unique_id=1619276293]
+position = Vector2(150, 280)
+texture = ExtResource("6_u5sy4")
+
+[node name="Line4" type="Sprite2D" parent="Objects/Stuff" unique_id=611499833]
+position = Vector2(-39, 223)
+texture = ExtResource("15_sww3w")
+
+[node name="Line5" type="Sprite2D" parent="Objects/Stuff" unique_id=1184976352]
+position = Vector2(40, 227)
+texture = ExtResource("15_sww3w")
+
+[node name="Tree2" type="Sprite2D" parent="Objects/Stuff" unique_id=610442410]
+position = Vector2(-70, 232)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree4" type="Sprite2D" parent="Objects/Stuff" unique_id=143995408]
+position = Vector2(68, 228)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree27" type="Sprite2D" parent="Objects/Stuff" unique_id=545009580]
+position = Vector2(-65, 299)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree28" type="Sprite2D" parent="Objects/Stuff" unique_id=1227094002]
+position = Vector2(-66, 256)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree29" type="Sprite2D" parent="Objects/Stuff" unique_id=344962968]
+position = Vector2(82, 224)
+texture = ExtResource("5_p57ef")
+
+[node name="Box26" type="Sprite2D" parent="Objects/Stuff" unique_id=2062043723]
+position = Vector2(-70, 269)
+texture = ExtResource("19_wljb1")
+
+[node name="Box27" type="Sprite2D" parent="Objects/Stuff" unique_id=1263554814]
+position = Vector2(-61, 277)
+texture = ExtResource("18_qouja")
+
+[node name="Box28" type="Sprite2D" parent="Objects/Stuff" unique_id=819364103]
+position = Vector2(-68, 286)
+texture = ExtResource("20_v2yb1")
+
+[node name="Bench11" type="Sprite2D" parent="Objects/Stuff" unique_id=1165039263]
+position = Vector2(-84, 302)
+texture = ExtResource("8_bt5mj")
+
+[node name="Bin9" type="Sprite2D" parent="Objects/Stuff" unique_id=1458335792]
+position = Vector2(-84, 289)
+texture = ExtResource("7_u5sy4")
+
+[node name="Bench12" type="Sprite2D" parent="Objects/Stuff" unique_id=1559145436]
+position = Vector2(-85, 273)
+texture = ExtResource("8_bt5mj")
+
+[node name="Tree30" type="Sprite2D" parent="Objects/Stuff" unique_id=592669495]
+position = Vector2(55, 281)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree31" type="Sprite2D" parent="Objects/Stuff" unique_id=782454013]
+position = Vector2(-35, 298)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree32" type="Sprite2D" parent="Objects/Stuff" unique_id=1957630847]
+position = Vector2(-27, 302)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree33" type="Sprite2D" parent="Objects/Stuff" unique_id=546405442]
+position = Vector2(-19, 289)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree34" type="Sprite2D" parent="Objects/Stuff" unique_id=593392553]
+position = Vector2(-11, 296)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree35" type="Sprite2D" parent="Objects/Stuff" unique_id=554403105]
+position = Vector2(0, 299)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree36" type="Sprite2D" parent="Objects/Stuff" unique_id=955291189]
+position = Vector2(23, 299)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree37" type="Sprite2D" parent="Objects/Stuff" unique_id=209393436]
+position = Vector2(44, 286)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree38" type="Sprite2D" parent="Objects/Stuff" unique_id=1167424320]
+position = Vector2(77, 286)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree39" type="Sprite2D" parent="Objects/Stuff" unique_id=598820830]
+position = Vector2(171, 313)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree40" type="Sprite2D" parent="Objects/Stuff" unique_id=690823016]
+position = Vector2(178, 311)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree41" type="Sprite2D" parent="Objects/Stuff" unique_id=868989237]
+position = Vector2(115, 224)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree42" type="Sprite2D" parent="Objects/Stuff" unique_id=638020547]
+position = Vector2(130, 222)
+texture = ExtResource("24_bhx41")
+
+[node name="Tree43" type="Sprite2D" parent="Objects/Stuff" unique_id=1306186150]
+position = Vector2(186, 217)
+texture = ExtResource("5_p57ef")
+
+[node name="Tree44" type="Sprite2D" parent="Objects/Stuff" unique_id=205050444]
+position = Vector2(153, 237)
+texture = ExtResource("24_bhx41")
+
+[node name="Barrier11" type="Sprite2D" parent="Objects/Stuff" unique_id=312323392]
+position = Vector2(169, 219)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier12" type="Sprite2D" parent="Objects/Stuff" unique_id=1590408482]
+position = Vector2(142, 219)
+texture = ExtResource("21_js0lu")
+
+[node name="Barrier13" type="Sprite2D" parent="Objects/Stuff" unique_id=1184321879]
+position = Vector2(98, 221)
+texture = ExtResource("21_js0lu")
+
+[node name="CarStartPositions" type="Node2D" parent="." unique_id=1871703100]
+metadata/_edit_lock_ = true
+
+[node name="Marker2D" type="Marker2D" parent="CarStartPositions" unique_id=144870143]
+position = Vector2(-206, 163)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D2" type="Marker2D" parent="CarStartPositions" unique_id=1048947937]
+position = Vector2(206, 141)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D3" type="Marker2D" parent="CarStartPositions" unique_id=526471591]
+position = Vector2(206, 116)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D4" type="Marker2D" parent="CarStartPositions" unique_id=1812912816]
+position = Vector2(-206, 92)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D5" type="Marker2D" parent="CarStartPositions" unique_id=88123590]
+position = Vector2(-204, 2)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D6" type="Marker2D" parent="CarStartPositions" unique_id=80282627]
+position = Vector2(-207, -24)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D7" type="Marker2D" parent="CarStartPositions" unique_id=675532234]
+position = Vector2(205, -53)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D8" type="Marker2D" parent="CarStartPositions" unique_id=935308769]
+position = Vector2(205, -95)
+metadata/_edit_lock_ = true
+
+[node name="Marker2D9" type="Marker2D" parent="CarStartPositions" unique_id=651077322]
+position = Vector2(-205, -119)
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Node2D" parent="." unique_id=51243985]
+position = Vector2(0, -182)
+
+[node name="CarTimer" type="Timer" parent="Timer" unique_id=1934036497]
+wait_time = 0.15
+autostart = true
+
+[connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
