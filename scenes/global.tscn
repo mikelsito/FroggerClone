@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cv0t1n0e7k0ls"]
+
+[ext_resource type="Script" uid="uid://iq8npekvmc52" path="res://scenes/global.gd" id="1_4pk28"]
+[ext_resource type="AudioStream" uid="uid://bov1w6fm8v8o5" path="res://audio/Forest_Hopper.mp3" id="2_nmxvb"]
+
+[node name="Global" type="Node" unique_id=444802625]
+script = ExtResource("1_4pk28")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=474300605]
+stream = ExtResource("2_nmxvb")
+autoplay = true
+parameters/looping = false

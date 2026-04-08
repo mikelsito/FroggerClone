@@ -1,9 +1,11 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775497180
+72322a848ab928aa5c89f0cb78209805
+::res://::1775674276
 asset sources.txt::TextFile::-1::1771319893::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1775674154::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5991746675164270125::1771319893::1775371895::1::::<><><>0<>0<>b524d7562d655860d6e95c77f9f4f098<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://audio/::1775371895
+::res://audio/::1775673526
 car.mp3::AudioStreamMP3::4688318768866284405::1752487843::1775371895::1::::<><><>0<>0<>1e4d4017b5b10df5d41056ca18b1529c<>res://.godot/imported/car.mp3-d823f64b9789635c596ad1d8b8e80f05.mp3str::
+Forest_Hopper.mp3::AudioStreamMP3::3414035993276710262::1775673526::1775673526::1::::<><><>0<>0<>3f32a65f4e80a8ecfdba09760fd1e2a8<>res://.godot/imported/Forest_Hopper.mp3-bd687cf07407df26754110ce7605a5a4.mp3str::
 S31-City on Speed.ogg::AudioStreamOggVorbis::8977675062932144427::1771319893::1775371895::1::::<><><>0<>0<>6a19a5d98227eeea5167bfcfc2d2e4d1<>res://.godot/imported/S31-City on Speed.ogg-ac786f73a31395cb077a5bf379e46f56.oggvorbisstr::
 ::res://fonts/::1775371895
 Better VCR 9.0.1.ttf::FontFile::525264482665087361::1771319893::1775371895::1::::<><><>0<>0<>8d43a50de6a81ca6d2e0f8885d97867a<>res://.godot/imported/Better VCR 9.0.1.ttf-0b419d366d973ba1e1c2e6cc67cd81b7.fontdata::
@@ -37,10 +39,17 @@ tree potted.png::CompressedTexture2D::3389544860567921485::1771319893::177537189
 ::res://graphics/player/::1775371895
 player_simple.png::CompressedTexture2D::3101742799475853270::1771319893::1775371895::1::::<><><>0<>0<>1c5e0eae2902f400d93138ed015c3d2b<>res://.godot/imported/player_simple.png-da0d067e94fb2205dce5f6ce7ba473b7.ctex::
 player_tileset.png::CompressedTexture2D::6843235375669234817::1771319893::1775371895::1::::<><><>0<>0<>21c29d67251e95d2bb7dfe9729d2bb88<>res://.godot/imported/player_tileset.png-4ca3aae43be08322f35644f77e38bfeb.ctex::
-::res://scenes/::1775659499
-game.tscn::PackedScene::7544890810589061561::1775659734::0::1::::<><><>0<>0<><>::uid://4vxvmd16aeo1::::res://scenes/game.gd<>uid://doghmovcgeltw::::res://graphics/map.png<>uid://dghd7rii024ea::::res://scenes/player.tscn<>uid://c63ni5hbggj1t::::res://scenes/tree1.tscn<>uid://br6wckkxrlyg6::::res://scenes/test.tscn
-player.tscn::PackedScene::7595085959222546404::1775599746::0::1::::<><><>0<>0<><>::uid://cy2wcn5w8edrw::::res://scenes/player.gd<>uid://c4q6c7mxqh78h::::res://graphics/player/player_tileset.png
-player.gd::GDScript::6514451889678789332::1775599746::0::1::::<>CharacterBody2D<><>0<>0<><>::
-game.gd::GDScript::2080263026981193462::1775659499::0::1::::<>Node2D<><>0<>0<><>::
-test.tscn::PackedScene::3644966623093915027::1775659693::0::1::::<><><>0<>0<><>::
-tree1.tscn::PackedScene::7007303291103918747::1775588243::0::1::::<><><>0<>0<><>::uid://d0so81ys3820n::::res://graphics/objects/tree1.png
+::res://scenes/::1775674104
+car1.tscn::PackedScene::927254885568301772::1775673919::0::1::::<><><>0<>0<><>::uid://bvl4ny6dj3mqa::::res://scenes/car_1.gd<>uid://ded8huv3lr1a7::::res://graphics/cars/yellow.png<>uid://b72b6pqe72w3n::::res://audio/car.mp3
+car_1.gd::GDScript::3884879872096218336::1775673000::0::1::::<>Area2D<><>0<>0<><>::
+game.gd::GDScript::2080263026981193462::1775673036::0::1::::<>Node2D<><>0<>0<><>::
+game.tscn::PackedScene::7544890810589061561::1775674021::0::1::::<><><>0<>0<><>::uid://4vxvmd16aeo1::::res://scenes/game.gd<>uid://doghmovcgeltw::::res://graphics/map.png<>uid://dghd7rii024ea::::res://scenes/player.tscn<>uid://br6wckkxrlyg6::::res://scenes/win.tscn<>uid://d0so81ys3820n::::res://graphics/objects/tree1.png<>uid://b8fq8sgkmu4dx::::res://graphics/objects/green car.png<>uid://d1h0ksxlju0ou::::res://graphics/objects/house1.png<>uid://ocjfhrelwysu::::res://graphics/cars/red.png<>uid://beho7qo80tneo::::res://graphics/objects/bin.png<>uid://cxutqp0hti8vw::::res://graphics/objects/bench.png<>uid://b778fphjcav0::::res://graphics/objects/light.png<>uid://oqgtp468wc6x::::res://graphics/objects/sign.png<>uid://cfe22lwgaf1k2::::res://graphics/objects/traffic.png<>uid://boj6kq1t4mduj::::res://graphics/objects/tree potted.png<>uid://b3jchn0artiyt::::res://graphics/objects/line.png<>uid://58kopy31xbf8::::res://graphics/objects/taxi.png<>uid://cgvtilagem3np::::res://graphics/objects/red car.png<>uid://y78osdw0bolc::::res://graphics/objects/box1.png<>uid://cv8cli0ov53f1::::res://graphics/objects/box2.png<>uid://cuqeolw7yvunc::::res://graphics/objects/box3.png<>uid://c5iy3tuxd0vaw::::res://graphics/objects/barrier.png<>uid://dxciltwc3sgll::::res://graphics/objects/house2.png<>uid://73gfa8tjrcik::::res://graphics/objects/house3.png<>uid://y3ndpd5bhsi3::::res://graphics/objects/tree2.png<>uid://hqpa84d2dqvp::::res://fonts/Better VCR 9.0.1.ttf
+global.gd::GDScript::596568463763634575::1775672612::0::1::::<>Node<><>0<>0<><>::
+global.tscn::PackedScene::6299617302789055740::1775674104::0::1::::<><><>0<>0<><>::uid://iq8npekvmc52::::res://scenes/global.gd<>uid://bov1w6fm8v8o5::::res://audio/Forest_Hopper.mp3
+player.gd::GDScript::6514451889678789332::1775673991::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::7595085959222546404::1775673991::0::1::::<><><>0<>0<><>::uid://cy2wcn5w8edrw::::res://scenes/player.gd<>uid://c4q6c7mxqh78h::::res://graphics/player/player_tileset.png
+title.gd::GDScript::4683199765094071178::1775672493::0::1::::<>Control<><>0<>0<><>::
+title.tscn::PackedScene::2869317040198481429::1775674039::0::1::::<><><>0<>0<><>::uid://dr201ov4c76pb::::res://fonts/Crackman.otf<>uid://b7ytu68u08vc1::::res://scenes/title.gd<>uid://c4q6c7mxqh78h::::res://graphics/player/player_tileset.png<>uid://hqpa84d2dqvp::::res://fonts/Better VCR 9.0.1.ttf
+tree1.tscn::PackedScene::7007303291103918747::1775665360::0::1::::<><><>0<>0<><>::uid://d0so81ys3820n::::res://graphics/objects/tree1.png
+win.gd::GDScript::1084464469816320662::1775672749::0::1::::<>Area2D<><>0<>0<><>::
+win.tscn::PackedScene::3644966623093915027::1775671371::0::1::::<><><>0<>0<><>::uid://ppk8a57h0h3k::::res://scenes/win.gd

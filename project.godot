@@ -19,6 +19,10 @@ run/main_scene="uid://bg46h5x2n6eev"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://cv0t1n0e7k0ls"
+
 [display]
 
 window/size/viewport_width=1280
@@ -62,3 +66,4 @@ confirm={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true

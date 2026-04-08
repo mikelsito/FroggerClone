@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction: Vector2 = Vector2(1,1)
-var speed: int = 150
+var speed: int = 100
 
 func animation():
 	if direction:

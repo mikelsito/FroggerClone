@@ -1,8 +1,6 @@
 extends Area2D
 
 var direction: Vector2 = Vector2.LEFT
-var speeds: Array = [150, 175, 200]
-var random_speed: int = speeds.pick_random()
 var speed: int = 150
 var colors: Array = [
 	preload("res://graphics/cars/green.png"),
